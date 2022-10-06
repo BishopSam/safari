@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:travel_app/src/exceptions/app_exception.dart';
 
 abstract class AuthRepository{
   Future<User?> signInWithGoogle();
@@ -8,9 +9,9 @@ abstract class AuthRepository{
 }
 
 class FirebaseAuthRepo extends AuthRepository {
-   final _firebaseAuth = FirebaseAuth.instance;
 
-  
+  final _firebaseAuth = FirebaseAuth.instance;
+
   @override
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
@@ -39,13 +40,10 @@ class FirebaseAuthRepo extends AuthRepository {
 
         return userCredential.user;
       } else {
-        throw FirebaseAuthException(
-            code: 'ERROR_MISSING_GOOGLE_IDTOKEN',
-            message: 'Missing Google IDtoken');
+        throw const AppException.invalidGoogleIdToken();
       }
     } else {
-      throw FirebaseAuthException(
-          code: 'ERROR_ABORTED_BY_USER');
+      throw const AppException.signInCanceled();
     }
   }
 
