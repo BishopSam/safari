@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "138334057864",
+    "project_id": "safari-26630",
+    "storage_bucket": "safari-26630.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138334057864:android:2cfcf9fd0cd05c44f2b63d",
+        "android_client_info": {
+          "package_name": "com.example.travel_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138334057864-0s86mr7an9ikat0bjbir6i39v2ejij3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMKHDpllHLQU5XGEzrfplGZ5sa30bVugM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138334057864-0s86mr7an9ikat0bjbir6i39v2ejij3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
