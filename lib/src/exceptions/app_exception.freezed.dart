@@ -38,19 +38,19 @@ mixin _$AppException {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignInCanceled value) signInCanceled,
-    required TResult Function(InvalidGoogleIdToken value) invalidGoogleIdToken,
+    required TResult Function(MissingGoogleIdToken value) invalidGoogleIdToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignInCanceled value)? signInCanceled,
-    TResult Function(InvalidGoogleIdToken value)? invalidGoogleIdToken,
+    TResult Function(MissingGoogleIdToken value)? invalidGoogleIdToken,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignInCanceled value)? signInCanceled,
-    TResult Function(InvalidGoogleIdToken value)? invalidGoogleIdToken,
+    TResult Function(MissingGoogleIdToken value)? invalidGoogleIdToken,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -145,7 +145,7 @@ class _$SignInCanceled implements SignInCanceled {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignInCanceled value) signInCanceled,
-    required TResult Function(InvalidGoogleIdToken value) invalidGoogleIdToken,
+    required TResult Function(MissingGoogleIdToken value) invalidGoogleIdToken,
   }) {
     return signInCanceled(this);
   }
@@ -154,7 +154,7 @@ class _$SignInCanceled implements SignInCanceled {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignInCanceled value)? signInCanceled,
-    TResult Function(InvalidGoogleIdToken value)? invalidGoogleIdToken,
+    TResult Function(MissingGoogleIdToken value)? invalidGoogleIdToken,
   }) {
     return signInCanceled?.call(this);
   }
@@ -163,7 +163,7 @@ class _$SignInCanceled implements SignInCanceled {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignInCanceled value)? signInCanceled,
-    TResult Function(InvalidGoogleIdToken value)? invalidGoogleIdToken,
+    TResult Function(MissingGoogleIdToken value)? invalidGoogleIdToken,
     required TResult orElse(),
   }) {
     if (signInCanceled != null) {
@@ -198,7 +198,7 @@ class __$$InvalidGoogleIdTokenCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InvalidGoogleIdToken implements InvalidGoogleIdToken {
+class _$InvalidGoogleIdToken implements MissingGoogleIdToken {
   const _$InvalidGoogleIdToken();
 
   @override
@@ -250,7 +250,7 @@ class _$InvalidGoogleIdToken implements InvalidGoogleIdToken {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SignInCanceled value) signInCanceled,
-    required TResult Function(InvalidGoogleIdToken value) invalidGoogleIdToken,
+    required TResult Function(MissingGoogleIdToken value) invalidGoogleIdToken,
   }) {
     return invalidGoogleIdToken(this);
   }
@@ -259,7 +259,7 @@ class _$InvalidGoogleIdToken implements InvalidGoogleIdToken {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(SignInCanceled value)? signInCanceled,
-    TResult Function(InvalidGoogleIdToken value)? invalidGoogleIdToken,
+    TResult Function(MissingGoogleIdToken value)? invalidGoogleIdToken,
   }) {
     return invalidGoogleIdToken?.call(this);
   }
@@ -268,7 +268,7 @@ class _$InvalidGoogleIdToken implements InvalidGoogleIdToken {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SignInCanceled value)? signInCanceled,
-    TResult Function(InvalidGoogleIdToken value)? invalidGoogleIdToken,
+    TResult Function(MissingGoogleIdToken value)? invalidGoogleIdToken,
     required TResult orElse(),
   }) {
     if (invalidGoogleIdToken != null) {
@@ -278,6 +278,6 @@ class _$InvalidGoogleIdToken implements InvalidGoogleIdToken {
   }
 }
 
-abstract class InvalidGoogleIdToken implements AppException {
-  const factory InvalidGoogleIdToken() = _$InvalidGoogleIdToken;
+abstract class MissingGoogleIdToken implements AppException {
+  const factory MissingGoogleIdToken() = _$InvalidGoogleIdToken;
 }
