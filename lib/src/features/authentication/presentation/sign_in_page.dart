@@ -57,7 +57,7 @@ class SignInPage extends ConsumerWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 18.0),
                       child: SignInButton(
-                        onPressed: () => ref
+                        onSignInPressed: () => ref
                             .read(signInPageControllerProvider.notifier)
                             .submit(),
                         isLoading: state.isLoading,

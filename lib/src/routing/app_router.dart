@@ -6,44 +6,46 @@ import 'package:go_router/go_router.dart';
 import 'package:travel_app/src/features/authentication/data/auth_repository.dart';
 import 'package:travel_app/src/features/authentication/presentation/sign_in_page.dart';
 import 'package:travel_app/src/features/destinations/presentation/home_page.dart';
+import 'package:travel_app/src/routing/not_found_screen.dart';
 
 enum AppRoute { signIn, home }
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   final authRepository = ref.watch(authRepositoryProvider);
   return GoRouter(
-      initialLocation: '/',
-      debugLogDiagnostics: true,
-      redirect: (_, state) {
-        final isLoggedIn = authRepository.currentUser != null;
-        if (isLoggedIn) {
+    initialLocation: '/',
+    debugLogDiagnostics: true,
+    redirect: (_, state) {
+      final isLoggedIn = authRepository.currentUser != null;
+      debugPrint( authRepository.currentUser?.displayName.toString());
+      if (isLoggedIn) {
         if (state.location == '/signIn') {
           return '/';
         }
-        } else {
-          if (state.location == '/') {
+      } else {
+        if (state.location == '/') {
           return '/signIn';
-         
         }
-        }
-      },
-      refreshListenable: GoRouterRefreshStream(authRepository.authStateChanges()),
-      routes: [
-        GoRoute(
+      }
+      return null;
+    },
+    refreshListenable: GoRouterRefreshStream(authRepository.authStateChanges()),
+    routes: [
+      GoRoute(
           path: '/',
           name: AppRoute.home.name,
           builder: (context, state) => const HomePage(),
           routes: [
-        GoRoute(
-          path: 'signIn',
-          name: AppRoute.signIn.name,
-          builder: (context, state) => const SignInPage(),
-        )
-          ]
-        ),
-      ]);
+            GoRoute(
+              path: 'signIn',
+              name: AppRoute.signIn.name,
+              builder: (context, state) => const SignInPage(),
+            )
+          ]),
+    ],
+    errorBuilder: (context, state) => const NotFoundScreen(),
+  );
 });
-
 
 class GoRouterRefreshStream extends ChangeNotifier {
   GoRouterRefreshStream(Stream<dynamic> stream) {
@@ -61,4 +63,3 @@ class GoRouterRefreshStream extends ChangeNotifier {
     super.dispose();
   }
 }
-
