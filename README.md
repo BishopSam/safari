@@ -44,13 +44,13 @@ Authentication
 --------------
 For this feature, I am making use of the Firebase Authentication API because the app design only requires google sign in.
 
-Here is the link to the folder if you want to jump right in!
+[Here](https://github.com/BishopSam/safari/tree/main/lib/src/features/authentication) is the link to the folder if you want to jump right in!
 
 Destinations
 ------------
-Although i intend on using an API endpoint to supply various destination data to the app, I will first off use dummy destination data to set things up. 
+Although I intend on using an API endpoint to supply various destination data to the app, I will first off use dummy destination data to set things up. 
 
-Here is the link to the folder if you want to jump right in!
+[Here](https://github.com/BishopSam/safari/tree/main/lib/src/features/destinations) is the link to the folder if you want to jump right in!
 
 Bookings
 --------
@@ -71,7 +71,7 @@ Todos
 - [ ] Integrate Cloud Functions for Notifications/Booking Reminders
 - [ ] Get an API endpoint for supplying destinations data
 - [ ] Write Full Integration Tests
-- [ ] Host app on [appetizer.io](https://appetize.io)
+- [ ] Host app on [appetize.io](https://appetize.io)
 
 App Demo
 ========
