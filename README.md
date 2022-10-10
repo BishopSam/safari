@@ -1,4 +1,4 @@
-# travel_app
+# Safari
 
 A new Flutter project.
 
