@@ -2,7 +2,9 @@
 
 An app for viewing various tourist destinations and booking dates for visitations.
 
-#### N/B: This application is built solely to showcase my skills in flutter development and not a real app that you can use to book real appointments with these tourist destinations.  
+#### N/B: This application is built solely to showcase my skills in flutter development and not a real app that you can use to book real appointments with these tourist destinations. 
+
+[Here](https://www.figma.com/file/VfSnD0IhoTJcyxzq6BiVWj/Travel-App---Free-Source-Code-and-Design-using-Flutter-(Community)?node-id=127%3A3645) is the link to the figma file
 
 Table of contents
 =================
