@@ -71,7 +71,7 @@ Todos
 - [ ] Integrate Cloud Functions for Notifications/Booking Reminders
 - [ ] Get an API endpoint for supplying destinations data
 - [ ] Write Full Integration Tests
-- [ ] Host app on [appetizer.io](https://appetizer.io)
+- [ ] Host app on [appetizer.io](https://appetize.io)
 
 App Demo
 ========
