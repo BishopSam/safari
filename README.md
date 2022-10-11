@@ -8,6 +8,7 @@ Table of contents
 =================
 <!--ts-->
    * [Project Structure](#project-structure)
+   * [Tools Used](#tools-used)
    * [Features](#features)
       * [Authentication](#authentication)
       * [Destinations](#destinations)
@@ -34,6 +35,15 @@ An example of the above stricture can be seen in this screenshot 👇
 ![Screenshot 2022-10-10 172429](https://user-images.githubusercontent.com/59648161/194912185-5ffc78f0-d632-464a-8f5b-e99174848e9f.png)
 
 This will ensure scalability as i intend to improve on the app in the future
+
+Tools Used
+==========
+
+| Tools | Usage |
+| ------- | ------- |
+| GoRouter | Navigation |
+| Riverpod | State Management |
+| Firebase | Backend Service |
 
 
 Features
