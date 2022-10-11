@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_app/src/constants/app_colors.dart';
+import 'package:travel_app/src/constants/fonts.dart';
 
 const kDialogDefaultKey = Key('dialog-default-key');
 
@@ -19,17 +21,28 @@ Future<bool?> showAlertDialog({
       context: context,
       barrierDismissible: cancelActionText != null,
       builder: (context) => AlertDialog(
-        title: Text(title),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        backgroundColor: kLightBlueColor,
+        title: Text(
+          title,
+          style: const TextStyle(fontFamily: kGilroyMedium),
+        ),
         content: content != null ? Text(content) : null,
         actions: <Widget>[
           if (cancelActionText != null)
             TextButton(
-              child: Text(cancelActionText),
+              child: Text(
+                cancelActionText,
+                style: const TextStyle(fontFamily: kGilroyRegular),
+              ),
               onPressed: () => Navigator.of(context).pop(false),
             ),
           TextButton(
             key: kDialogDefaultKey,
-            child: Text(defaultActionText),
+            child: Text(
+              defaultActionText,
+              style: const TextStyle(fontFamily: kGilroyRegular),
+            ),
             onPressed: () => Navigator.of(context).pop(true),
           ),
         ],

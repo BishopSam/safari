@@ -37,9 +37,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           return '/home';
         }
       } else {
-        if (state.location == '/home') {
+        if (state.location == '/home' || state.location == '/profile' ) {
           return '/signIn';
         }
+        //return '/signIn';
       }
       return null;
     },
