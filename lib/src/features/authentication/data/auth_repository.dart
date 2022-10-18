@@ -42,7 +42,7 @@ class FirebaseAuthRepo extends AuthRepository {
 
         return userCredential.user;
       } else {
-        throw const AppException.missingGoogleIdToken();
+        throw const AppException.invalidGoogleIdToken();
       }
     } else {
       throw const AppException.signInCanceled();

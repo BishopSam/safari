@@ -5,7 +5,7 @@ class PrimaryButton extends StatelessWidget {
   const PrimaryButton(
       {super.key,
       required this.onPressed,
-       this.loading = false,
+      this.loading = false,
       required this.child});
   final VoidCallback? onPressed;
   final bool loading;
@@ -16,7 +16,7 @@ class PrimaryButton extends StatelessWidget {
     return TextButton(
       onPressed: loading ? null : onPressed,
       style: TextButton.styleFrom(
-          minimumSize: const Size(100, 60),
+          minimumSize: const Size(80, 60),
           backgroundColor: kPrimaryColor,
           foregroundColor: Colors.white,
           shape: const RoundedRectangleBorder(

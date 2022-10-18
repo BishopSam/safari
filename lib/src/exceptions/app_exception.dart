@@ -6,7 +6,7 @@ part 'app_exception.freezed.dart';
 class AppException with _$AppException {
   //Auth
   const factory AppException.signInCanceled() = SignInCanceled;
-  const factory AppException.missingGoogleIdToken() = MissingGoogleIdToken;
+  const factory AppException.invalidGoogleIdToken() = MissingGoogleIdToken;
 }
 
 class AppExceptionData {

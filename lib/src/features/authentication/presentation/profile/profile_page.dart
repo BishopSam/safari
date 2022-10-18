@@ -55,7 +55,7 @@ class ProfilePage extends ConsumerWidget {
                   padding: const EdgeInsets.only(
                       right: 15.0, left: 15, top: 20, bottom: 10),
                   child: UserDataWidget(
-                    user: user!,
+                    user: user ,
                   ),
                 ),
               ),
@@ -88,7 +88,7 @@ class ProfilePage extends ConsumerWidget {
 
 class UserDataWidget extends StatelessWidget {
   const UserDataWidget({super.key, required this.user});
-  final User user;
+  final User? user;
 
   @override
   Widget build(BuildContext context) {
@@ -97,14 +97,14 @@ class UserDataWidget extends StatelessWidget {
         gapH12,
         UserInfoWidget(
           title: 'Name',
-          info: user.displayName!,
+          info: user?.displayName ?? '',
         ),
         gapH24,
-        UserInfoWidget(info: user.email!, title: 'E-mail'),
+        UserInfoWidget(info: user?.email ?? '', title: 'E-mail'),
         gapH24,
-        UserInfoWidget(info: user.phoneNumber ?? '', title: 'Phone Number'),
+        UserInfoWidget(info: user?.phoneNumber ?? '', title: 'Phone Number'),
         gapH24,
-        UserInfoWidget(info: user.phoneNumber ?? '', title: 'Location')
+        UserInfoWidget(info: user?.phoneNumber ?? '', title: 'Location')
       ],
     );
   }

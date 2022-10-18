@@ -3,7 +3,6 @@ import 'package:travel_app/src/common_widgets/primary_button.dart';
 import 'package:travel_app/src/constants/app_sizes.dart';
 import 'package:travel_app/src/constants/fonts.dart';
 
-
 class SignInButton extends PrimaryButton {
   SignInButton(
       {super.key, required this.onSignInPressed, required this.isLoading})
@@ -11,13 +10,15 @@ class SignInButton extends PrimaryButton {
           onPressed: onSignInPressed,
           loading: isLoading,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset('assets/google_logo.png'),
-              gapW12,
-              const Text(
-                'Continue with Google',
-                style: TextStyle(fontFamily: kGilroyBold, fontSize: 17),
+              gapW24,
+              const Expanded(
+                child: Text(
+                  'Continue with Google',
+                  style: TextStyle(fontFamily: kGilroyBold, fontSize: 16),
+                ),
               ),
             ],
           ),

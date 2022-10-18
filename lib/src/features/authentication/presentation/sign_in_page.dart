@@ -20,54 +20,54 @@ class SignInPage extends ConsumerWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              gapH12,
-              SvgPicture.asset('assets/signin_pic.svg'),
-              gapH64,
-              Container(
-                height: 320,
-                width: 286,
-                decoration: const BoxDecoration(
-                    color: kLightBlueColor,
-                    borderRadius: BorderRadius.all(Radius.circular(30))),
-                child: Column(
-                  children: [
-                    gapH24,
-                    const Text(
-                      'Visit your dream \ndestinations',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontFamily: kGilroyExtraBold,
-                        fontSize: 32,
-                        color: Colors.black,
-                      ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                gapH24,
+                SvgPicture.asset('assets/signin_pic.svg'),
+                gapH64,
+                Container(
+                  width: 286,
+                  decoration: const BoxDecoration(
+                      color: kLightBlueColor,
+                      borderRadius: BorderRadius.all(Radius.circular(30))),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0, vertical: 16),
+                    child: Column(
+                      children: [
+                        const Text(
+                          'Visit your dream \ndestinations',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: kGilroyExtraBold,
+                            fontSize: 32,
+                            color: Colors.black,
+                          ),
+                        ),
+                        gapH12,
+                        const Text(
+                          'Easily plan, manage \nand order \nyour journey with \nSafari',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: kGilroyRegular,
+                            fontSize: 16,
+                            color: Colors.black,
+                          ),
+                        ),
+                        gapH12,
+                        SignInButton(
+                          onSignInPressed: () => ref
+                              .read(signInPageControllerProvider.notifier)
+                              .submit(),
+                          isLoading: state.isLoading,
+                        ),
+                      ],
                     ),
-                    gapH24,
-                    const Text(
-                      'Easily plan, manage \nand order \nyour journey with \nSafari',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontFamily: kGilroyRegular,
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
-                    ),
-                    gapH24,
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                      child: SignInButton(
-                        onSignInPressed: () => ref
-                            .read(signInPageControllerProvider.notifier)
-                            .submit(),
-                        isLoading: state.isLoading,
-                      ),
-                    ),
-                    gapH12
-                  ],
-                ),
-              )
-            ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
